@@ -16,3 +16,24 @@ imageContainer.addEventListener('mousemove', (e) => {
 imageContainer.addEventListener('mouseleave', () => {
     image.style.transform = 'scale(1) translate(0, 0)'
 })
+
+
+let indice = 0
+
+function moverSlide(direcao) {
+  const slides = document.querySelectorAll('.slide')
+  const totalSlides = slides.length
+
+  indice += direcao
+
+  if (indice < 0) {
+    indice = totalSlides - 1
+  } else if (indice >= totalSlides) {
+    indice = 0
+  }
+
+  const slideWidth = slides[0].clientWidth
+  const slidesContainer = document.querySelector('.slides')
+
+  slidesContainer.style.transform = `translateX(-${indice * slideWidth}px)`
+}

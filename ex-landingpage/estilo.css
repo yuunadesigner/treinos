@@ -100,3 +100,65 @@ h2 {
     object-fit: cover;
     transition: transform 0.1s ease;
 }
+#compra {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #0D0D0D;
+    color: white;
+}
+#compra > h1 {
+    font-size: 1.9em;
+    color: #D2D904;
+}
+#compra > p#num {
+    font-size: 1.8em;
+    padding: 0px 5px 0px ;
+    margin: 0;
+}
+#compra > p#so {
+    padding: 10px 0px 0px;
+}
+#compra > p {
+    font-size: 1em;
+    padding: 0px 5px 10px;
+    margin: 0;
+}
+.carrossel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.slide > img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
